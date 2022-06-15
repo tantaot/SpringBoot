@@ -23,3 +23,12 @@ person:
         weight: 100.01
       - name: to2
         weight: 100.01
+
+spring:
+#  resources:
+#    设置自定义静态资源访问路径
+#    static-locations: [classpath:/my/,classpath:/a/]
+#  mvc:
+#    设置静态资源访问前缀(加上之后，无法默认访问index页面，也无法访问favicon.ico)
+#    static-path-pattern: /rs/**
+

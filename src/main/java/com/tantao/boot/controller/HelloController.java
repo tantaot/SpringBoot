@@ -28,8 +28,10 @@ public class HelloController {
     @Autowired
     Person person;
 
-    @RequestMapping("/hello")
+    @RequestMapping("/hello.jpg")
     public Person sayHello(){
+
+       /*
         String userName = person.getUserName();
         Date birth = person.getBirth();
         Boolean boss = person.getBoss();
@@ -39,7 +41,7 @@ public class HelloController {
         Map<String, Object> score = person.getScore();
         Map<String, List<Pet>> allPets = person.getAllPets();
         Set<Double> salarys = person.getSalarys();
-        System.out.println("======username:" + userName + "====birth:" + birth
+       System.out.println("======username:" + userName + "====birth:" + birth
                 +"====boss:" + boss + "====pet:" + pet);
         System.out.println("===animal");
         for (String s : animal) {
@@ -63,7 +65,7 @@ public class HelloController {
             for (Pet pet1 : value) {
                 System.out.println(entry.getKey() +":" + pet1);
             }
-        }
+        }*/
         return person;
     }
 
