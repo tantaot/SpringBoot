@@ -7,8 +7,7 @@ import com.tantao.boot.bean.Pet;
 import com.tantao.boot.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
@@ -68,5 +67,27 @@ public class HelloController {
         }*/
         return person;
     }
+
+
+    @GetMapping("/user")
+    public String getUser(){
+        return "get-user";
+    }
+
+    @PostMapping("/user")
+    public String postUser(){
+        return "post-user";
+    }
+
+    @DeleteMapping("/user")
+    public String deleteUser(){
+        return "delete-user";
+    }
+
+    @PutMapping("/user")
+    public String putUser(){
+        return "put-user";
+    }
+
 
 }

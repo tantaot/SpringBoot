@@ -31,4 +31,9 @@ spring:
 #  mvc:
 #    设置静态资源访问前缀(加上之后，无法默认访问index页面，也无法访问favicon.ico)
 #    static-path-pattern: /rs/**
+  mvc:
+    hiddenmethod:
+      filter:
+#        开始rest风格的请求
+        enabled: true
 
