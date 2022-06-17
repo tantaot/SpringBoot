@@ -11,10 +11,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
+import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.util.UrlPathHelper;
+
 
 @ImportResource(value = "classpath:bean.xml")//导入配置文件
 @Import(value = {User.class})//导入组件
-@Configuration //表示这是一个配置类
+@Configuration//表示这是一个配置类
 @EnableConfigurationProperties(Car.class)
 /*
 * 1、开启car的配置绑定功能
@@ -22,17 +26,15 @@ import org.springframework.web.filter.HiddenHttpMethodFilter;
 * */
 public class MyConfig {
 
+    @Bean(value = "tom")
+    public Pet pet(){
+        return new Pet("tom",10.00);
+    }
 
     @ConditionalOnBean(name = "tom")
     @Bean
     public User user(){
         return new User("张三",pet());
-    }
-
-
-    @Bean(value = "tom")
-    public Pet pet(){
-        return new Pet("tom",10.00);
     }
 
     /*
